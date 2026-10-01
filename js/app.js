@@ -126,7 +126,7 @@
     $('sLoops').textContent = st.loops === 0 ? '0 (مثالية)' : String(st.loops);
     $('sTime').textContent = st.timeMs < 1 ? '< 1 م.ث' : Math.round(st.timeMs) + ' م.ث';
     const shapeLbl = m.shape === 'masked' ? (MS.MASK_TYPES[state.s.maskType] || '').replace(/\s*\(.*\)/, '') : SHAPE_NAMES[m.shape];
-    $('mazeChip').textContent = shapeLbl + ' • ' + m.grid.cols + '×' + m.grid.rows + ' • ' + MS.ALGORITHMS[m.algorithm].name;
+    $('mazeChip').textContent = shapeLbl + ' • ' + (m.shape === 'polar' ? m.grid.describe() : m.grid.cols + '×' + m.grid.rows) + ' • ' + MS.ALGORITHMS[m.algorithm].name;
     if (m.shape === 'masked' && m.maskInfo) {
       const mi = m.maskInfo, parts = [];
       if (mi.note) parts.push(mi.note);
