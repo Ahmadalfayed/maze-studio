@@ -46,7 +46,11 @@
     try { saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch (e) { saved = {}; }
     const s = Object.assign({}, DEFAULTS, saved);
     s.colors = Object.assign({}, DEFAULTS.colors, saved.colors || {});
-    if (!s.theme) s.theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    if (!s.theme) {
+      s.theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+      // أول تشغيل بسمة داكنة: نستخدم ألوان السمة الداكنة ما لم يخصّص المستخدم الألوان
+      if (!saved.colors) s.colors = Object.assign({}, PALETTES[s.theme]);
+    }
     if (!s.seed) s.seed = MS.randomSeedString();
     return s;
   }
