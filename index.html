@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>استوديو المتاهات — مولّد ألغاز المتاهات</title>
+  <meta name="description" content="استوديو المتاهات: مولّد متاهات احترافي يعمل دون اتصال — خوارزميات متعددة، أشكال مربعة ودائرية وسداسية ومثلثية ومنسوجة، متاهات على شكل قلب ونجمة ونص وصورة، لعب تفاعلي، وتصدير للطباعة.">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:title" content="استوديو المتاهات">
+  <meta property="og:description" content="مولّد ألغاز متاهات احترافي يعمل في المتصفح دون إنترنت.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M8 8h16v16H8zM8 14h10M14 20h10M14 14v6' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- مكتبة الأيقونات (SVG مضمّن) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8z"/><path d="M19 15v4M17 17h4M5 3v3M3.5 4.5h3"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M9.9 5.2A9.8 9.8 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-2.6 3.5M6.6 6.6A17 17 0 0 0 2 12s3.6 7 10 7a9.6 9.6 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2M3 3l18 18"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></symbol>
+      <symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="5.5"/><path d="M7 12.5h4M9 10.5v4"/><circle cx="15.5" cy="11.5" r=".9"/><circle cx="17.8" cy="13.8" r=".9"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a7 7 0 0 0 10.7 10.7z"/></symbol>
+      <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M15 4v16"/></symbol>
+      <symbol id="i-wand" viewBox="0 0 24 24"><path d="M15 4V2M15 10V8M12 6h-2M20 6h-2M18 3.5 17 4.5M18 8.5l-1-1M13 3.5l1 1"/><path d="M3 21 14 10l-.2-.2a1.4 1.4 0 0 0-2 0L3 18.8a1.4 1.4 0 0 0 0 2z"/></symbol>
+      <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 1 10-10c0 2.8-2.2 4-4 4h-2.2a1.8 1.8 0 0 0-1.3 3c.5.6.3 3-2.5 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10.5" cy="7" r="1.2"/><circle cx="15.5" cy="7.5" r="1.2"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+      <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V3h12v6"/><rect x="2.5" y="9" width="19" height="8" rx="2"/><path d="M6 14h12v7H6z"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+      <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.3" cy="8.3" r="1.1"/><circle cx="15.7" cy="15.7" r="1.1"/><circle cx="12" cy="12" r="1.1"/><circle cx="15.7" cy="8.3" r="1.1"/><circle cx="8.3" cy="15.7" r="1.1"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A2.5 2.5 0 0 1 2 12.5v-8A2.5 2.5 0 0 1 4.5 2h8A2.5 2.5 0 0 1 15 4.5V5"/></symbol>
+      <symbol id="i-shapes" viewBox="0 0 24 24"><path d="M8.5 2.5 13 10H4z"/><circle cx="17" cy="7" r="3.8"/><rect x="3.5" y="14" width="7" height="7" rx="1.5"/><path d="M17 13.5c-1.6-1.6-4.5-.5-4.5 2 0 2.6 4.5 5.5 4.5 5.5s4.5-2.9 4.5-5.5c0-2.5-2.9-3.6-4.5-2z"/></symbol>
+      <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5"/><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="7" r="2.5"/><path d="M6 7.5v9M18 9.5a7 7 0 0 1-7 7H8.5"/></symbol>
+      <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 15.5 15.5 3 21 8.5 8.5 21z"/><path d="m7.5 11.5 2 2M10.5 8.5l2 2M13.5 5.5l2 2"/></symbol>
+      <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 22V4M5 4h12l-2.5 4.5L17 13H5"/></symbol>
+      <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 3v18M17 3v18M3 8h4M3 16h4M17 8h4M17 16h4"/></symbol>
+      <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 10v3.5l2.2 2.2M9.5 2.5h5"/></symbol>
+      <symbol id="i-steps" viewBox="0 0 24 24"><path d="M5 16.5V14c0-2-1-3-1-5.5C4 5.8 5.5 3 8 3s3 2.3 3 4c0 3-2 5.5-2 8.5v1a2 2 0 1 1-4 0z"/><path d="M19 20.5V18c0-2 1-3 1-5.5 0-2.7-1.5-5.5-4-5.5s-3 2.3-3 4c0 3 2 5.5 2 8.5v1a2 2 0 1 0 4 0z"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15.3-6.4L21 8.3M21 3v5.3h-5.3M21 12a9 9 0 0 1-15.3 6.4L3 15.7M3 21v-5.3h5.3"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H17a3.5 3.5 0 0 0 0-7H7a3.5 3.5 0 0 1 0-7h8.5"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+      <symbol id="i-loop" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></symbol>
+      <symbol id="i-cells" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></symbol>
+      <symbol id="i-speed" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="app" id="app">
+    <!-- الشريط العلوي -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M8 8h16v16H8zM8 14h10M14 20h10M14 14v6"/></svg>
+        </div>
+        <div class="brand-text">
+          <h1>استوديو المتاهات</h1>
+          <p>صمّم، حُلّ، والعب — ألغاز متاهات احترافية بلمسة واحدة</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="badge-offline" title="يعمل دون اتصال بالإنترنت"><i class="dot"></i> يعمل دون إنترنت</span>
+        <button class="icon-btn" id="btnSidebar" title="إظهار/إخفاء لوحة الإعدادات" aria-label="لوحة الإعدادات"><svg><use href="#i-panel"/></svg></button>
+        <button class="icon-btn theme-btn" id="btnTheme" title="تبديل الوضع الداكن/الفاتح" aria-label="تبديل السمة">
+          <svg class="ic-moon"><use href="#i-moon"/></svg><svg class="ic-sun"><use href="#i-sun"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- لوحة الإعدادات بتبويبات -->
+      <aside class="sidebar" id="sidebar">
+        <div class="tabs" role="tablist" aria-label="أقسام الإعدادات">
+          <button class="tab active" role="tab" data-tab="create" aria-selected="true"><svg><use href="#i-wand"/></svg><span>إنشاء</span></button>
+          <button class="tab" role="tab" data-tab="style" aria-selected="false"><svg><use href="#i-palette"/></svg><span>تخصيص</span></button>
+          <button class="tab" role="tab" data-tab="export" aria-selected="false"><svg><use href="#i-download"/></svg><span>تصدير</span></button>
+        </div>
+
+        <!-- تبويب الإنشاء -->
+        <div class="tab-pane active" data-pane="create" role="tabpanel">
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-target"/></svg>مستوى الصعوبة</h2>
+            <div class="segmented" id="presets" role="group" aria-label="مستوى الصعوبة">
+              <button data-preset="easy"><b>سهل</b></button>
+              <button data-preset="medium"><b>متوسط</b></button>
+              <button data-preset="hard"><b>صعب</b></button>
+              <button data-preset="expert"><b>خبير</b></button>
+            </div>
+            <p class="note" id="presetNote">اختر مستوى جاهزاً أو خصّص الإعدادات أدناه.</p>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-shapes"/></svg>الشكل والخوارزمية</h2>
+            <label class="field"><span>شكل المتاهة</span>
+              <select id="shape">
+                <option value="square">مربعة</option>
+                <option value="masked">أشكال مخصّصة (قلب، نجمة، نص، صورة…)</option>
+                <option value="polar">دائرية</option>
+                <option value="hex">سداسية</option>
+                <option value="tri">مثلثية</option>
+                <option value="weave">منسوجة (ممرات تعبر تحت بعضها)</option>
+              </select>
+            </label>
+
+            <div class="mask-box" id="maskBox" hidden>
+              <label class="field"><span>الشكل</span>
+                <select id="maskType"></select>
+              </label>
+              <div id="maskTextRow" hidden>
+                <label class="field"><span>الكلمة (عربية أو لاتينية)</span>
+                  <input type="text" id="maskText" maxlength="24" placeholder="اكتب كلمة…" autocomplete="off">
+                </label>
+              </div>
+              <div id="maskImageRow" hidden>
+                <label class="upload" for="maskFile"><svg><use href="#i-upload"/></svg><span id="maskFileName">اختر صورة (PNG/JPG/SVG)</span></label>
+                <input type="file" id="maskFile" accept="image/*" hidden>
+                <div class="field-row">
+                  <label for="maskThreshold">عتبة الأبيض/الأسود <output id="maskThresholdOut"></output></label>
+                  <input type="range" id="maskThreshold" min="5" max="95">
+                </div>
+                <label class="switch"><input type="checkbox" id="maskInvert"><i></i><span>عكس (الأجزاء الفاتحة هي المتاهة)</span></label>
+              </div>
+              <label class="field"><span>الأجزاء المنفصلة</span>
+                <select id="maskJoin">
+                  <option value="bridge">وصلها بممرات قصيرة (متاهة واحدة)</option>
+                  <option value="largest">الاكتفاء بأكبر جزء</option>
+                </select>
+              </label>
+              <p class="note" id="maskNote"></p>
+            </div>
+
+            <label class="field"><span>خوارزمية التوليد</span>
+              <select id="algorithm"></select>
+            </label>
+            <p class="note" id="algoNote"></p>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-ruler"/></svg>الحجم والتعقيد</h2>
+            <div class="field-row" id="rowWidth">
+              <label for="width">العرض (خلايا)</label>
+              <div class="range-pair"><input type="range" id="widthR" min="2" max="120"><input type="number" id="width" min="2" max="120"></div>
+            </div>
+            <div class="field-row" id="rowHeight">
+              <label for="height">الارتفاع (خلايا)</label>
+              <div class="range-pair"><input type="range" id="heightR" min="2" max="120"><input type="number" id="height" min="2" max="120"></div>
+            </div>
+            <div class="field-row" id="rowRings" hidden>
+              <label for="rings">عدد الحلقات</label>
+              <div class="range-pair"><input type="range" id="ringsR" min="3" max="60"><input type="number" id="rings" min="3" max="60"></div>
+            </div>
+            <p class="note" id="triNote" hidden>في الشكل المثلثي يمثّل كل عمود عرضٍ مثلثين متجاورين.</p>
+            <div class="field-row">
+              <label for="braid">إزالة الطرق المسدودة (تضفير) <output id="braidOut">0%</output></label>
+              <input type="range" id="braid" min="0" max="100" step="5">
+            </div>
+            <p class="note">التضفير يضيف حلقات فتصبح المتاهة غير مثالية وبها أكثر من طريق.</p>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-hash"/></svg>البذرة</h2>
+            <div class="seed-row">
+              <input type="text" id="seed" dir="ltr" spellcheck="false" autocomplete="off" aria-label="البذرة">
+              <button class="icon-btn" id="btnDice" title="بذرة عشوائية جديدة" aria-label="بذرة عشوائية"><svg><use href="#i-dice"/></svg></button>
+              <button class="icon-btn" id="btnCopySeed" title="نسخ البذرة" aria-label="نسخ البذرة"><svg><use href="#i-copy"/></svg></button>
+            </div>
+            <p class="note">نفس البذرة ونفس الإعدادات تعطي نفس المتاهة دائماً.</p>
+          </section>
+        </div>
+
+        <!-- تبويب التخصيص -->
+        <div class="tab-pane" data-pane="style" role="tabpanel">
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-flag"/></svg>البداية والنهاية</h2>
+            <label class="field"><span>موضع البداية والنهاية</span>
+              <select id="placement">
+                <option value="corners">زوايا متقابلة / المركز ← الحافة</option>
+                <option value="farthest">أبعد نقطتين (أطول حل)</option>
+                <option value="boundary">نقطتان على الإطار الخارجي</option>
+                <option value="edgemid">منتصف الأعلى ← منتصف الأسفل</option>
+                <option value="random">عشوائي</option>
+              </select>
+            </label>
+            <label class="switch"><input type="checkbox" id="openings"><i></i><span>فتح مدخل ومخرج في الإطار الخارجي</span></label>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-palette"/></svg>المظهر والألوان</h2>
+            <div class="field-row">
+              <label for="cellSize">حجم الخلية <output id="cellSizeOut"></output></label>
+              <input type="range" id="cellSize" min="6" max="60">
+            </div>
+            <div class="field-row">
+              <label for="wallWidth">سماكة الجدار <output id="wallWidthOut"></output></label>
+              <input type="range" id="wallWidth" min="1" max="12">
+            </div>
+            <div class="colors">
+              <label><input type="color" id="cWall"><span>الجدران</span></label>
+              <label><input type="color" id="cBg"><span>الخلفية</span></label>
+              <label><input type="color" id="cPath"><span>مسار الحل</span></label>
+              <label><input type="color" id="cStart"><span>البداية</span></label>
+              <label><input type="color" id="cEnd"><span>النهاية</span></label>
+              <label><input type="color" id="cPlayer"><span>اللاعب</span></label>
+            </div>
+            <button class="btn ghost small wide" id="btnResetColors"><svg><use href="#i-refresh"/></svg>استعادة الألوان الافتراضية</button>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-film"/></svg>الحركة والسرعة</h2>
+            <label class="switch"><input type="checkbox" id="animateGen"><i></i><span>توليد متحرك (عرض خطوات الخوارزمية)</span></label>
+            <div class="field-row">
+              <label for="speed">سرعة الحركة <output id="speedOut"></output></label>
+              <input type="range" id="speed" min="1" max="100">
+            </div>
+          </section>
+        </div>
+
+        <!-- تبويب التصدير -->
+        <div class="tab-pane" data-pane="export" role="tabpanel">
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-download"/></svg>تنزيل صورة</h2>
+            <div class="field-row inline">
+              <label for="pngScale">دقة PNG</label>
+              <select id="pngScale">
+                <option value="2">×2</option>
+                <option value="3" selected>×3 (عالية)</option>
+                <option value="4">×4 (طباعة)</option>
+                <option value="6">×6 (ملصق)</option>
+              </select>
+            </div>
+            <label class="switch"><input type="checkbox" id="exportSolution"><i></i><span>تضمين الحل في الملف</span></label>
+            <div class="btn-row">
+              <button class="btn" id="btnPNG"><svg><use href="#i-download"/></svg>PNG</button>
+              <button class="btn" id="btnSVG"><svg><use href="#i-download"/></svg>SVG</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-printer"/></svg>طباعة / PDF</h2>
+            <label class="switch"><input type="checkbox" id="printAnswers" checked><i></i><span>إضافة صفحة/صفحات الحل</span></label>
+            <label class="switch"><input type="checkbox" id="printBW" checked><i></i><span>ألوان مناسبة للطباعة (أبيض وأسود)</span></label>
+            <button class="btn wide" id="btnPrint"><svg><use href="#i-printer"/></svg>طباعة المتاهة الحالية</button>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title"><svg><use href="#i-book"/></svg>كتاب متاهات</h2>
+            <label class="field"><span>عنوان الكتاب</span><input type="text" id="bookTitle" value="كتاب المتاهات"></label>
+            <div class="grid2">
+              <label class="field"><span>عدد المتاهات</span><input type="number" id="batchCount" min="1" max="100" value="8"></label>
+              <label class="field"><span>في كل صفحة</span>
+                <select id="perPage"><option value="1">1</option><option value="2" selected>2</option><option value="4">4</option><option value="6">6</option></select>
+              </label>
+            </div>
+            <label class="switch"><input type="checkbox" id="bookCover" checked><i></i><span>صفحة غلاف</span></label>
+            <button class="btn primary wide" id="btnBook"><svg><use href="#i-book"/></svg>إنشاء كتاب للطباعة / PDF</button>
+            <p class="note">في نافذة الطباعة اختر «حفظ بتنسيق PDF». كل متاهة تأخذ بذرة مشتقة (البذرة-1، البذرة-2…) فيمكن إعادة إنتاج الكتاب.</p>
+          </section>
+        </div>
+      </aside>
+
+      <!-- منطقة العرض -->
+      <main class="stage">
+        <div class="toolbar">
+          <button class="btn primary lg" id="btnNew"><svg><use href="#i-sparkles"/></svg>متاهة جديدة</button>
+          <div class="btn-group">
+            <button class="btn" id="btnSolution" aria-pressed="false"><svg class="ic-show"><use href="#i-eye"/></svg><svg class="ic-hide"><use href="#i-eye-off"/></svg><span class="lbl">إظهار الحل</span></button>
+            <button class="btn" id="btnAnimSolve"><svg><use href="#i-play"/></svg>حل متحرك</button>
+          </div>
+          <button class="btn accent" id="btnPlay"><svg><use href="#i-gamepad"/></svg>العب</button>
+          <div class="hud" id="hud" hidden>
+            <span class="hud-item"><svg><use href="#i-timer"/></svg><b id="hudTime">00:00</b></span>
+            <span class="hud-item"><svg><use href="#i-steps"/></svg><b id="hudMoves">0</b> خطوة</span>
+            <button class="icon-btn sm" id="btnRestart" title="إعادة" aria-label="إعادة"><svg><use href="#i-refresh"/></svg></button>
+            <button class="btn small danger" id="btnStopPlay"><svg><use href="#i-x"/></svg>إنهاء</button>
+          </div>
+          <span class="status" id="status"></span>
+        </div>
+
+        <div class="canvas-card" id="canvasCard">
+          <div class="canvas-head">
+            <span class="chip" id="mazeChip">—</span>
+            <span class="legend-mini"><i class="lg-start"></i>البداية <i class="lg-end"></i>النهاية</span>
+          </div>
+          <div class="canvas-wrap" id="canvasWrap">
+            <canvas id="mazeCanvas" aria-label="المتاهة" role="img" tabindex="0"></canvas>
+            <div class="win" id="winOverlay" hidden>
+              <div class="win-card">
+                <div class="win-emoji">🏆</div>
+                <h2>أحسنت! وصلت إلى النهاية</h2>
+                <p id="winText"></p>
+                <div class="btn-row center">
+                  <button class="btn primary" id="btnWinNew"><svg><use href="#i-sparkles"/></svg>متاهة جديدة</button>
+                  <button class="btn" id="btnWinAgain"><svg><use href="#i-refresh"/></svg>العب مجدداً</button>
+                  <button class="btn ghost" id="btnWinClose">إغلاق</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="hint" id="hint"><kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> أو <kbd dir="ltr">W A S D</kbd> أو السحب بالفأرة/الإصبع في وضع اللعب — العودة للخلف تمحو الأثر.</p>
+        </div>
+
+        <section class="stats" id="stats" aria-label="إحصاءات المتاهة">
+          <div class="stat"><i class="si c1"><svg><use href="#i-grid"/></svg></i><div><span>الشكل والأبعاد</span><b id="sDims">—</b></div></div>
+          <div class="stat"><i class="si c2"><svg><use href="#i-branch"/></svg></i><div><span>الخوارزمية</span><b id="sAlgo">—</b></div></div>
+          <div class="stat"><i class="si c3"><svg><use href="#i-hash"/></svg></i><div><span>البذرة</span><b id="sSeed" dir="ltr">—</b></div></div>
+          <div class="stat"><i class="si c4"><svg><use href="#i-cells"/></svg></i><div><span>عدد الخلايا</span><b id="sCells">—</b></div></div>
+          <div class="stat"><i class="si c5"><svg><use href="#i-target"/></svg></i><div><span>الطرق المسدودة</span><b id="sDead">—</b></div></div>
+          <div class="stat"><i class="si c6"><svg><use href="#i-route"/></svg></i><div><span>طول الحل</span><b id="sSol">—</b></div></div>
+          <div class="stat"><i class="si c7"><svg><use href="#i-loop"/></svg></i><div><span>الحلقات</span><b id="sLoops">—</b></div></div>
+          <div class="stat"><i class="si c8"><svg><use href="#i-clock"/></svg></i><div><span>زمن التوليد</span><b id="sTime">—</b></div></div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">صُنع بـ HTML و JavaScript فقط • بدون مكتبات خارجية • خط Cairo مضمَّن (OFL)</footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!-- منطقة الطباعة: تُملأ عند الطلب وتظهر فقط عند الطباعة -->
+  <div id="print-area"></div>
+
+  <script src="js/rng.js"></script>
+  <script src="js/masks.js"></script>
+  <script src="js/grids.js"></script>
+  <script src="js/algorithms.js"></script>
+  <script src="js/maze.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/play.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
