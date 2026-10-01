@@ -13,3 +13,8 @@
 - **Cloudflare Pages**: Workers & Pages ← Create ← Pages ← Upload assets ← ارفع المجلد/الملف المضغوط.
 - **GitHub Pages**: أنشئ مستودعاً وارفع محتوى المجلد إلى الفرع `main`، ثم Settings ← Pages ← Deploy from branch (ملف `.nojekyll` موجود).
 - **Surge**: `npx surge ./maze-studio your-name.surge.sh` (يطلب تسجيل بريد وكلمة مرور).
+
+
+## الحقوق
+
+جميع الحقوق محفوظة © 2026 Ahmadalfayed. يُمنع نسخ الكود أو إعادة استخدامه دون إذن. التفاصيل في ملف [LICENSE](LICENSE).
